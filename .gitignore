@@ -12,3 +12,5 @@ wheels/
 data/
 .cursor/
 threads_cookies.pkl
+.DS_Store
+chromedriver-mac-arm64/
