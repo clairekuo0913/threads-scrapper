@@ -52,12 +52,25 @@ def decode_shortcode_to_id(shortcode):
 
 
 def clean_post_text(text):
+    """
+    Clean post text by removing common noise patterns.
+
+    Removes:
+    - "更多\n" prefix
+    - "\n讚" and content after it
+    - "已靜音" and everything after it (Instagram metadata)
+    """
     if "更多\n" in text:
         text = text.split("更多\n", 1)[-1]
+
     if "\n讚" in text:
         text = text.rsplit("\n讚", 1)[0]
-    if text.endswith("\n已靜音"):
-        text = text[:-4]
+
+    # Remove "已靜音" and everything after it
+    # This removes Instagram logo, username and other metadata
+    if "已靜音" in text:
+        text = text.split("已靜音")[0]
+
     return text.strip()
 
 

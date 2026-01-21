@@ -200,6 +200,8 @@ def setup_jieba():
             "8",
             "9",
             "0",
+            "10",
+            "已靜音",
         ]
     )
     return stop_words

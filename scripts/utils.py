@@ -44,6 +44,22 @@ def set_chinese_font() -> None:
     )
 
 
+def clean_text(text: str) -> str:
+    """
+    Clean post text by removing '已靜音' and everything after it.
+    Also removes other common noise patterns.
+    """
+    if not text:
+        return ""
+
+    # Remove '已靜音' and everything after it
+    if "已靜音" in text:
+        text = text.split("已靜音")[0]
+
+    # Strip whitespace
+    return text.strip()
+
+
 def load_data(data_dir: str) -> pd.DataFrame:
     """
     Load all JSON files from the data directory into a pandas DataFrame.
@@ -72,6 +88,9 @@ def load_data(data_dir: str) -> pd.DataFrame:
                 post["followers"] = followers
                 if "text" not in post:
                     post["text"] = ""
+                else:
+                    # Clean the text
+                    post["text"] = clean_text(post["text"])
                 all_posts.append(post)
 
         except Exception as e:
