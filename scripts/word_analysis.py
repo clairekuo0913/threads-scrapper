@@ -379,13 +379,14 @@ def analyze_categories(word_df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
     print("\nCategory Performance:")
     print(cat_stats)
 
-    return cat_stats, cat_counts
+    return cat_stats, cat_counts, cat_df
 
 
 def plot_word_analysis(
     word_counts: pd.Series,
     word_stats: pd.DataFrame,
     cat_stats: pd.DataFrame,
+    cat_df: pd.DataFrame,
     output_dir: str,
 ) -> None:
     """
@@ -434,6 +435,7 @@ def plot_word_analysis(
     if font_path:
         wc_kwargs["font_path"] = font_path
 
+    # Overall Word Cloud
     wc = WordCloud(**wc_kwargs)
     wc.generate_from_frequencies(word_counts)
 
@@ -444,6 +446,36 @@ def plot_word_analysis(
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, "wordcloud.png"))
     plt.close()
+
+    # Category Word Clouds
+    # Map internal category names to filename suffixes
+    cat_map = {
+        "Business": "business",
+        "Media": "media",
+        "Tech": "tools",  # Mapping "Tech" to "tools" as per doc requirement
+    }
+
+    for cat_name, file_suffix in cat_map.items():
+        print(f"Generating Word Cloud for {cat_name}...")
+        # Filter words for this category
+        cat_words = cat_df[cat_df["category"] == cat_name]["words"]
+
+        if cat_words.empty:
+            print(f"No words found for category {cat_name}, skipping.")
+            continue
+
+        cat_word_counts = cat_words.value_counts()
+
+        wc_cat = WordCloud(**wc_kwargs)
+        wc_cat.generate_from_frequencies(cat_word_counts)
+
+        plt.figure(figsize=(12, 6))
+        plt.imshow(wc_cat, interpolation="bilinear")
+        plt.axis("off")
+        plt.title(f"Word Cloud - {cat_name}")
+        plt.tight_layout()
+        plt.savefig(os.path.join(output_dir, f"wordcloud_{file_suffix}.png"))
+        plt.close()
 
     # 2. Top 20 Words by Frequency
     plt.figure(figsize=(12, 8))
@@ -503,7 +535,7 @@ if __name__ == "__main__":
         word_stats = analyze_word_engagement(word_df)
 
         # 3. Categories
-        cat_stats, cat_counts = analyze_categories(word_df)
+        cat_stats, cat_counts, cat_df = analyze_categories(word_df)
 
         # 4. Save Data
         output_csv = os.path.join(script_dir, "tables/word-analysis.csv")
@@ -512,4 +544,4 @@ if __name__ == "__main__":
 
         # 5. Plots
         plots_dir = os.path.join(script_dir, "plots/word-analysis")
-        plot_word_analysis(word_counts, word_stats, cat_stats, plots_dir)
+        plot_word_analysis(word_counts, word_stats, cat_stats, cat_df, plots_dir)
