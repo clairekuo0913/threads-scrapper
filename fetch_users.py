@@ -104,7 +104,7 @@ def fetch_users_by_keyword(driver, keyword: str) -> Set[str]:
 
 def main():
     keywords = ["創業", "行銷", "ㄧ人公司"]
-    output_file = "discovered_users.json"
+    output_file = "data/discovered_users.json"
     all_users = set()
 
     # Load existing users if file exists

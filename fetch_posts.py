@@ -13,7 +13,7 @@ from selenium import webdriver
 
 # Constants for scraping
 SCROLL_PAUSE_TIME = 10
-MAX_SCROLLS = 5
+MAX_SCROLLS = 10
 COOKIES_FILE = "threads_cookies.pkl"
 THREADS_BASE_URL = "https://www.threads.net"
 DATA_DIR = "data"
@@ -427,7 +427,7 @@ if __name__ == "__main__":
             print(f"\n成功提取 Profile ({username}) 與 {len(snapshot.posts)} 篇貼文。")
     else:
         # Batch mode from discovered_users.json
-        json_path = "discovered_users.json"
+        json_path = "data/discovered_users.json"
         if Path(json_path).exists():
             print(f"發現 {json_path}，開始批次爬取...")
             try:
