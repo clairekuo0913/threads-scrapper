@@ -558,6 +558,14 @@ if __name__ == "__main__":
         available_tiers = df["tier"].unique().tolist()
         tiers_to_process = ["All"] + [t for t in tier_order if t in available_tiers]
 
+        # Sampling settings
+        SAMPLE_TIERS = ["100-1k", "1k-10k", "10k-100k"]
+        MAX_POSTS_PER_USER = {
+            "100-1k": 50,
+            "1k-10k": 50,
+            "10k-100k": 100,
+        }
+
         for tier in tiers_to_process:
             print(f"\n=== Processing Tier: {tier} ===")
 
@@ -569,6 +577,29 @@ if __name__ == "__main__":
             if current_df.empty:
                 print(f"No posts for tier {tier}, skipping.")
                 continue
+
+            # Apply sampling for specific tiers to reduce spam/high-frequency bias
+            if tier in SAMPLE_TIERS:
+                limit = MAX_POSTS_PER_USER[tier]
+                original_count = len(current_df)
+                original_users = current_df["username"].nunique()
+                print(
+                    f"Filtering users with <= {limit} posts and sampling max {limit} posts..."
+                )
+
+                # Filter users who have enough posts
+                user_counts = current_df["username"].value_counts()
+                active_users = user_counts[user_counts > limit].index
+                current_df = current_df[current_df["username"].isin(active_users)]
+
+                # Sort by date (newest first) to get the most relevant recent content
+                current_df = current_df.sort_values("posted_at", ascending=False)
+                # Group by username and take top N
+                current_df = current_df.groupby("username").head(limit)
+                sampled_users = current_df["username"].nunique()
+                print(
+                    f"Reduced from {original_count} posts ({original_users} users) to {len(current_df)} posts ({sampled_users} users)."
+                )
 
             print(f"Analyzing {len(current_df)} posts for tier {tier}...")
 
