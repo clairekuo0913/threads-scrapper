@@ -64,10 +64,12 @@ def load_data(data_dir: str) -> pd.DataFrame:
 
             profile = data.get("profile", {})
             username = profile.get("username", "unknown")
+            followers = profile.get("followers", 0)
             posts = data.get("posts", [])
 
             for post in posts:
                 post["username"] = username
+                post["followers"] = followers
                 if "text" not in post:
                     post["text"] = ""
                 all_posts.append(post)

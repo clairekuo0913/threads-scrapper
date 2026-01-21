@@ -192,7 +192,7 @@ def analyze_word_frequency(
     # Explode to get one row per word
     # This creates a much larger dataframe
     word_df = df.explode("words")
-    # Drop rows where words is NaN (empty lists resulted in NaN after explode? No, empty list explodes to nothing/NaN depending on pandas version/settings, usually rows disappear or become NaN. Let's check dropna)
+    # Drop rows where words is NaN
     word_df = word_df.dropna(subset=["words"])
 
     # Count frequency
@@ -220,7 +220,6 @@ def analyze_word_engagement(word_df: pd.DataFrame, min_count: int = 10) -> pd.Da
     word_stats.columns = ["_".join(col).strip() for col in word_stats.columns.values]
     # The count is the same for all metrics, just take one
     word_stats = word_stats.rename(columns={"like_count_count": "count"})
-    # Drop redundant count columns if any (pandas agg might produce like_count_count, reply_count_count etc if we asked for it, but here we asked agg on list of cols. Wait, syntax above: groupby(cols).agg(['count', ...]) applies count to all cols. So we get like_count_count, reply_count_count. They are identical.)
     # Let's keep one count and drop others.
     word_stats = word_stats.drop(
         columns=["reply_count_count", "repost_count_count"], errors="ignore"
@@ -368,7 +367,7 @@ def analyze_categories(word_df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
 
     if cat_df.empty:
         print("No categorized words found.")
-        return pd.DataFrame(), pd.Series()
+        return pd.DataFrame(), pd.Series(), pd.DataFrame()
 
     # Group by category
     cat_stats = cat_df.groupby("category")[
@@ -436,16 +435,17 @@ def plot_word_analysis(
         wc_kwargs["font_path"] = font_path
 
     # Overall Word Cloud
-    wc = WordCloud(**wc_kwargs)
-    wc.generate_from_frequencies(word_counts)
+    if not word_counts.empty:
+        wc = WordCloud(**wc_kwargs)
+        wc.generate_from_frequencies(word_counts)
 
-    plt.figure(figsize=(12, 6))
-    plt.imshow(wc, interpolation="bilinear")
-    plt.axis("off")
-    plt.title("Word Cloud")
-    plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, "wordcloud.png"))
-    plt.close()
+        plt.figure(figsize=(12, 6))
+        plt.imshow(wc, interpolation="bilinear")
+        plt.axis("off")
+        plt.title("Word Cloud")
+        plt.tight_layout()
+        plt.savefig(os.path.join(output_dir, "wordcloud.png"))
+        plt.close()
 
     # Category Word Clouds
     # Map internal category names to filename suffixes
@@ -478,24 +478,26 @@ def plot_word_analysis(
         plt.close()
 
     # 2. Top 20 Words by Frequency
-    plt.figure(figsize=(12, 8))
-    # Sort ascending for horizontal bar chart (top items at top)
-    word_counts.head(20).sort_values().plot(kind="barh")
-    plt.title("Top 20 Frequent Words")
-    plt.xlabel("Frequency")
-    plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, "top_words_freq.png"))
-    plt.close()
+    if not word_counts.empty:
+        plt.figure(figsize=(12, 8))
+        # Sort ascending for horizontal bar chart (top items at top)
+        word_counts.head(20).sort_values().plot(kind="barh")
+        plt.title("Top 20 Frequent Words")
+        plt.xlabel("Frequency")
+        plt.tight_layout()
+        plt.savefig(os.path.join(output_dir, "top_words_freq.png"))
+        plt.close()
 
     # 3. Top 20 High Engagement Words
-    plt.figure(figsize=(12, 8))
-    top_eng = word_stats.sort_values("like_count_median", ascending=False).head(20)
-    top_eng["like_count_median"].sort_values().plot(kind="barh", color="orange")
-    plt.title("Top 20 High Engagement Words (Median Likes)")
-    plt.xlabel("Median Likes")
-    plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, "top_words_engagement.png"))
-    plt.close()
+    if not word_stats.empty:
+        plt.figure(figsize=(12, 8))
+        top_eng = word_stats.sort_values("like_count_median", ascending=False).head(20)
+        top_eng["like_count_median"].sort_values().plot(kind="barh", color="orange")
+        plt.title("Top 20 High Engagement Words (Median Likes)")
+        plt.xlabel("Median Likes")
+        plt.tight_layout()
+        plt.savefig(os.path.join(output_dir, "top_words_engagement.png"))
+        plt.close()
 
     # 4. Category Performance
     if not cat_stats.empty:
@@ -509,6 +511,21 @@ def plot_word_analysis(
         plt.close()
 
     print(f"Plots saved to {output_dir}")
+
+
+def get_follower_tier(followers):
+    if followers <= 100:
+        return "0-100"
+    elif followers <= 1000:
+        return "100-1k"
+    elif followers <= 10000:
+        return "1k-10k"
+    elif followers <= 100000:
+        return "10k-100k"
+    elif followers <= 1000000:
+        return "100k-1m"
+    else:
+        return "1m+"
 
 
 if __name__ == "__main__":
@@ -528,20 +545,53 @@ if __name__ == "__main__":
     else:
         print(f"Loaded {len(df)} posts.")
 
-        # 1. Frequency
-        word_df, word_counts = analyze_word_frequency(df, stop_words)
+        # Add follower tier
+        # Ensure followers column exists and is numeric
+        if "followers" not in df.columns:
+            df["followers"] = 0
+        df["followers"] = pd.to_numeric(df["followers"], errors="coerce").fillna(0)
 
-        # 2. Engagement
-        word_stats = analyze_word_engagement(word_df)
+        df["tier"] = df["followers"].apply(get_follower_tier)
 
-        # 3. Categories
-        cat_stats, cat_counts, cat_df = analyze_categories(word_df)
+        # Define tier order
+        tier_order = ["0-100", "100-1k", "1k-10k", "10k-100k", "100k-1m", "1m+"]
+        available_tiers = df["tier"].unique().tolist()
+        tiers_to_process = ["All"] + [t for t in tier_order if t in available_tiers]
 
-        # 4. Save Data
-        output_csv = os.path.join(script_dir, "tables/word-analysis.csv")
-        word_stats.to_csv(output_csv)
-        print(f"Saved word stats to {output_csv}")
+        for tier in tiers_to_process:
+            print(f"\n=== Processing Tier: {tier} ===")
 
-        # 5. Plots
-        plots_dir = os.path.join(script_dir, "plots/word-analysis")
-        plot_word_analysis(word_counts, word_stats, cat_stats, cat_df, plots_dir)
+            if tier == "All":
+                current_df = df
+            else:
+                current_df = df[df["tier"] == tier]
+
+            if current_df.empty:
+                print(f"No posts for tier {tier}, skipping.")
+                continue
+
+            print(f"Analyzing {len(current_df)} posts for tier {tier}...")
+
+            # 1. Frequency
+            word_df, word_counts = analyze_word_frequency(current_df, stop_words)
+
+            if word_df.empty:
+                print("No words found.")
+                continue
+
+            # 2. Engagement
+            word_stats = analyze_word_engagement(word_df)
+
+            # 3. Categories
+            cat_stats, cat_counts, cat_df = analyze_categories(word_df)
+
+            # 4. Save Data
+            output_csv = os.path.join(script_dir, f"tables/word-analysis-{tier}.csv")
+            # Ensure tables directory exists
+            os.makedirs(os.path.dirname(output_csv), exist_ok=True)
+            word_stats.to_csv(output_csv)
+            print(f"Saved word stats to {output_csv}")
+
+            # 5. Plots
+            plots_dir = os.path.join(script_dir, f"plots/word-analysis/{tier}")
+            plot_word_analysis(word_counts, word_stats, cat_stats, cat_df, plots_dir)
