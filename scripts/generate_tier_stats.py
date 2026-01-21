@@ -49,26 +49,25 @@ def calculate_tier_stats():
     )
 
     # Group by tier
-    tier_stats = (
-        df.groupby("tier")
-        .agg(
-            {
-                "username": "nunique",  # User count
-                "id": "count",  # Post count
-                "total_engagement": "sum",  # Total interactions
-                "engagement_rate": "mean",  # Average ER per post
-                "followers": "mean",  # Average followers
-            }
-        )
-        .rename(
-            columns={
-                "username": "user_count",
-                "id": "post_count",
-                "total_engagement": "total_interactions",
-                "engagement_rate": "avg_engagement_rate",
-            }
-        )
+    tier_stats = df.groupby("tier").agg(
+        {
+            "username": "nunique",  # User count
+            "id": "count",  # Post count
+            "total_engagement": ["sum", "mean"],  # Total interactions & avg per post
+            "engagement_rate": "mean",  # Average ER per post
+            "followers": "mean",  # Average followers
+        }
     )
+
+    # Flatten column names
+    tier_stats.columns = [
+        "user_count",
+        "post_count",
+        "total_interactions",
+        "avg_engagement_per_post",
+        "avg_engagement_rate",
+        "avg_followers",
+    ]
 
     # Reorder index
     tier_order = ["0-100", "100-1k", "1k-10k", "10k-100k", "100k-1m", "1m+"]
