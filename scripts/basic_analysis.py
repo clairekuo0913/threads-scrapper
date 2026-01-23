@@ -315,6 +315,24 @@ def main():
 
     print(f"Loaded {len(df)} posts.")
 
+    # Filter out accounts with too many followers (>100k)
+    # Convert followers to numeric if not already
+    if "followers" in df.columns:
+        df["followers"] = pd.to_numeric(df["followers"], errors="coerce").fillna(0)
+        original_count = len(df)
+        original_users = df["username"].nunique()
+        
+        # Filter out accounts with > 100k followers
+        df = df[df["followers"] <= 100000]
+        
+        filtered_count = len(df)
+        filtered_users = df["username"].nunique()
+        removed_posts = original_count - filtered_count
+        removed_users = original_users - filtered_users
+        
+        print(f"\nFiltered out {removed_posts} posts from {removed_users} account(s) with >100k followers.")
+        print(f"Remaining: {filtered_count} posts from {filtered_users} accounts.")
+
     # Run analyses
     df = analyze_time_based(df)
     df = analyze_content_form(df)
