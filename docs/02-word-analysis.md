@@ -157,5 +157,64 @@
 
 ---
 
+## 附錄：分析程式碼
+
+完整分析腳本：[scripts/word_analysis.py](../scripts/word_analysis.py)
+
+### 核心程式碼片段
+
+```python
+# 1. 設定 jieba 與停用詞
+stop_words = setup_jieba()
+
+# 2. 載入資料
+df = load_data(data_dir)
+
+# 3. 依粉絲數分級距
+df["tier"] = df["followers"].apply(get_follower_tier)
+
+# 4. 斷詞分析
+df["words"] = df["text"].apply(lambda x: segment_text(x, stop_words))
+word_df = df.explode("words").dropna(subset=["words"])
+
+# 5. 詞頻統計
+word_counts = word_df["words"].value_counts()
+
+# 6. 互動分析（使用中位數避免離群值）
+word_stats = word_df.groupby("words")[
+    ["like_count", "reply_count", "repost_count"]
+].agg(["count", "median", "mean"])
+
+# 7. 類別分析
+word_df["category"] = word_df["words"].map(word_to_cat)
+cat_stats = word_df.groupby("category")[
+    ["like_count", "reply_count", "repost_count"]
+].mean()
+```
+
+### 執行分析
+
+```bash
+# 執行完整分析（會依粉絲級距分別分析）
+python scripts/word_analysis.py
+
+# 輸出檔案
+# - scripts/tables/word-analysis-{tier}.csv (各級距詞彙統計)
+# - scripts/plots/word-analysis/{tier}/wordcloud.png (詞雲圖)
+# - scripts/plots/word-analysis/{tier}/top_words_freq.png (高頻詞圖表)
+# - scripts/plots/word-analysis/{tier}/top_words_engagement.png (高互動詞圖表)
+# - scripts/plots/word-analysis/{tier}/category_performance.png (類別成效圖表)
+```
+
+### 所需套件
+
+```bash
+pip install jieba
+pip install wordcloud
+pip install pandas matplotlib
+```
+
+---
+
 📊 **狀態**：✅ 已完成
 **最後更新**：2026-01-21
