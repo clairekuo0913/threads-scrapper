@@ -98,9 +98,26 @@ def analyze_time_based(df: pd.DataFrame) -> pd.DataFrame:
     df["hour"] = df["posted_at_tw"].dt.hour
     hourly_stats = df.groupby("hour")[
         ["like_count", "reply_count", "repost_count"]
-    ].mean()
+    ].agg(["mean", "count"])
+
+    # Flatten column names
+    hourly_stats.columns = [
+        "_".join(col).strip() for col in hourly_stats.columns.values
+    ]
+
     print("\n1. Hourly Average Engagement (Top 5 hours by Likes):")
-    print(hourly_stats.sort_values("like_count", ascending=False).head(5))
+    # Rename for clarity in print output
+    display_stats = hourly_stats.sort_values("like_count_mean", ascending=False).head(5)
+    print(
+        display_stats[
+            [
+                "like_count_mean",
+                "reply_count_mean",
+                "repost_count_mean",
+                "like_count_count",
+            ]
+        ]
+    )
 
     # 2. Equal Time Intervals (e.g., 6 blocks of 4 hours)
     # 0-4, 4-8, 8-12, 12-16, 16-20, 20-24
@@ -112,9 +129,24 @@ def analyze_time_based(df: pd.DataFrame) -> pd.DataFrame:
 
     interval_stats = df.groupby("time_interval", observed=False)[
         ["like_count", "reply_count", "repost_count"]
-    ].mean()
+    ].agg(["mean", "count"])
+
+    # Flatten column names
+    interval_stats.columns = [
+        "_".join(col).strip() for col in interval_stats.columns.values
+    ]
+
     print("\n2. Equal Time Intervals Analysis:")
-    print(interval_stats)
+    print(
+        interval_stats[
+            [
+                "like_count_mean",
+                "reply_count_mean",
+                "repost_count_mean",
+                "like_count_count",
+            ]
+        ]
+    )
 
     # 3. Commercial Time Slots
     # Morning Commute: 07:00 - 09:00
@@ -149,11 +181,23 @@ def analyze_time_based(df: pd.DataFrame) -> pd.DataFrame:
 
     slot_stats = df.groupby("commercial_slot")[
         ["like_count", "reply_count", "repost_count"]
-    ].mean()
-    # Sort by a logical order if needed, but pandas sort is alphabetical by default or index
+    ].agg(["mean", "count"])
+
+    # Flatten column names
+    slot_stats.columns = ["_".join(col).strip() for col in slot_stats.columns.values]
+
     # Let's sort by like_count for "effectiveness"
     print("\n3. Commercial Time Slots Analysis (Sorted by Likes):")
-    print(slot_stats.sort_values("like_count", ascending=False))
+    print(
+        slot_stats.sort_values("like_count_mean", ascending=False)[
+            [
+                "like_count_mean",
+                "reply_count_mean",
+                "repost_count_mean",
+                "like_count_count",
+            ]
+        ]
+    )
 
     return df
 
@@ -192,9 +236,24 @@ def analyze_content_form(df):
 
     length_stats = df.groupby("length_bin", observed=False)[
         ["like_count", "reply_count", "repost_count"]
-    ].mean()
+    ].agg(["mean", "count"])
+
+    # Flatten column names
+    length_stats.columns = [
+        "_".join(col).strip() for col in length_stats.columns.values
+    ]
+
     print("\n1. Text Length 'Sweet Spot' (Average Engagement):")
-    print(length_stats)
+    print(
+        length_stats[
+            [
+                "like_count_mean",
+                "reply_count_mean",
+                "repost_count_mean",
+                "like_count_count",
+            ]
+        ]
+    )
 
     # 2. Sentences Count Bins
     # With right=False, bins are [a, b), so [0,1) captures 0, [1,2) captures 1, etc.
@@ -220,9 +279,24 @@ def analyze_content_form(df):
 
     sentences_stats = df.groupby("sentences_bin", observed=False)[
         ["like_count", "reply_count", "repost_count"]
-    ].mean()
+    ].agg(["mean", "count"])
+
+    # Flatten column names
+    sentences_stats.columns = [
+        "_".join(col).strip() for col in sentences_stats.columns.values
+    ]
+
     print("\n2. Sentences Count 'Sweet Spot' (Average Engagement):")
-    print(sentences_stats)
+    print(
+        sentences_stats[
+            [
+                "like_count_mean",
+                "reply_count_mean",
+                "repost_count_mean",
+                "like_count_count",
+            ]
+        ]
+    )
 
     return df
 
