@@ -1,34 +1,26 @@
-{
-  "title": "Threads 分析報告",
-  "description": "關鍵成效因子分析 - 找出最佳內容策略",
-  "author": "Pot Kuo",
-  "language": "zh-tw",
-  "gitbook": ">=3.2.3",
-  "root": ".",
-  "structure": {
-    "readme": "README.md",
-    "summary": "SUMMARY.md"
-  },
-  "plugins": [
-    "katex",
-    "theme-comscore",
-    "expandable-chapters",
-    "back-to-top-button",
-    "search-pro",
-    "-lunr",
-    "-search",
-    "github",
-    "chapter-fold"
-  ],
-  "pluginsConfig": {
-    "theme-default": {
-      "showLevel": true
+[
+    {
+        "path": "docs/README.md",
+        "title": "Introduction"
     },
-    "github": {
-      "url": "https://github.com/clairekuo0913/threads-scrapper"
+    {
+        "path": "docs/00-dataset-analysis.md",
+        "title": "0. 資料集分布分析"
+    },
+    {
+        "path": "docs/01-basic-analysis.md",
+        "title": "1. 基礎指標分析"
+    },
+    {
+        "path": "docs/02-word-analysis.md",
+        "title": "2. 詞彙分析"
+    },
+    {
+        "path": "docs/03-article-classification.md",
+        "title": "3. 文章分類"
+    },
+    {
+        "path": "docs/04-creator-classification.md",
+        "title": "4. 創作者分類"
     }
-  },
-  "styles": {
-    "website": "styles/website.css"
-  }
-}
+]
