@@ -35,14 +35,14 @@
 - **粉絲分布**：呈現明顯的 M 型化或右偏分布。雖然平均粉絲數近 3,000，但有一半以上的用戶粉絲數低於 800 人。
 - **活躍度**：用戶發文量相對均勻（Gini 0.419），中位數為 76 篇，顯示這批樣本用戶屬於持續活躍的創作者群體。
 
-![User Followers Distribution](../scripts/plots/dataset-analysis/dist_user_followers.png)
+![User Followers Distribution](../scripts/outputs/plots/dataset-analysis/dist_user_followers.png)
 *(上圖：用戶粉絲數分布 - 對數座標)*
 
 ### 3.2 貼文內容形式
 - **篇幅偏好**：平均 124 字，中位數 84 字。
 - **分布狀況**：大多數貼文落在 43-172 字之間（P25-P75），顯示「短篇圖文」或「心情隨筆」是此平台的內容主流。
 
-![Text Length Distribution](../scripts/plots/dataset-analysis/dist_text_length.png)
+![Text Length Distribution](../scripts/outputs/plots/dataset-analysis/dist_text_length.png)
 
 ### 3.3 互動成效（Engagement）
 互動數據展現了極端的「貧富差距」：
@@ -51,13 +51,13 @@
 - **擴散難度**：轉發數（Reposts）的中位數為 0，代表超過一半的貼文完全沒有被轉發。轉發是此資料集中最稀缺的互動資源。
 - **極端值**：最高按讚數達 20,000，是中位數的 2,500 倍。
 
-![Likes Boxplot](../scripts/plots/dataset-analysis/box_likes.png)
+![Likes Boxplot](../scripts/outputs/plots/dataset-analysis/box_likes.png)
 *(上圖：按讚數箱型圖 - 已隱藏極端離群值以顯示分佈主體)*
 
 ### 3.4 相關性矩陣
 各指標間的相關係數（Correlation）顯示：
 
-![Correlation Matrix](../scripts/plots/dataset-analysis/correlation_matrix.png)
+![Correlation Matrix](../scripts/outputs/plots/dataset-analysis/correlation_matrix.png)
 
 - **按讚與轉發**：通常具有高度正相關。
 - **字數與互動**：需觀察相關係數，通常字數與互動的直接線性相關性較低，代表內容品質比長短更重要（呼應 Basic Analysis 的結論）。
@@ -72,5 +72,5 @@
 
 ### 附錄：分析執行
 - 腳本位置：`scripts/dataset_analysis.py`
-- 產出圖表：`scripts/plots/dataset-analysis/`
+- 產出圖表：`scripts/outputs/plots/dataset-analysis/`
 - 統計報表：`scripts/tables/dataset_stats_summary.csv`
