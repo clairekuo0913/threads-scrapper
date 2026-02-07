@@ -1,0 +1,572 @@
+{
+  "10a.m.studio": {
+    "primary_type": "專業服務型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要內容圍繞霧眉服務，分享作品、工作室資訊，並有預約導流意圖。同時也記錄了創業初期的個人經歷和感受。"
+  },
+  "1onemancompany": {
+    "primary_type": "創業歷程型",
+    "secondary_type": null,
+    "confidence": 0.9,
+    "reasoning": "創作者分享個人創業目標、收入支出、資產變化等，記錄個人財務狀況和理財決策，同時包含香港生活和經濟狀況的觀察。"
+  },
+  "2025_babybear": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要貼文包含商品照、價格、促銷等電商導購元素，同時穿插創業歷程的記錄，但電商導購特徵更為明顯。"
+  },
+  "_brenda.tsai": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "思想觀點型",
+    "confidence": 0.9,
+    "reasoning": "創作者分享個人從職場到裸辭創業的歷程，包含轉職故事和心路歷程，同時也分享商業思維和職場觀點。"
+  },
+  "_christyho_": {
+    "primary_type": "知識教學型",
+    "secondary_type": "思想觀點型",
+    "confidence": 0.9,
+    "reasoning": "帳號名稱和簡介強調自媒體教學和課程，貼文內容包含教學和經驗分享，但也有部分觀點評論。"
+  },
+  "a_bb__460": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "專業服務型",
+    "confidence": 0.85,
+    "reasoning": "主要分享創業開店的心路歷程，包含遇到的困難與解決方法，同時也提供頭皮護理的專業服務。"
+  },
+  "ahyu.talk": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "知識教學型",
+    "confidence": 0.85,
+    "reasoning": "創作者簡介和貼文內容都圍繞著數位遊牧、網絡賺錢和線上創業，分享個人經驗和成長歷程，同時也提供一些教學內容。"
+  },
+  "an.dore__": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "帳號名稱和簡介顯示販售飾品配件，貼文內容包含商品（jellycat），符合電商導購特徵。部分貼文記錄創業初期Threads的粉絲增長，略帶創業歷程型特徵。"
+  },
+  "ananote.brand": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "思想觀點型",
+    "confidence": 0.85,
+    "reasoning": "主要內容為個人職場經驗分享、轉職故事，穿插個人觀點與職場觀察。"
+  },
+  "angel_tea__wumiao": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要販售飲料，並有促銷和訂購資訊。同時分享開店心得和創業歷程，但導購意圖更明顯。"
+  },
+  "askgirlfriend222": {
+    "primary_type": "思想觀點型",
+    "secondary_type": "專業服務型",
+    "confidence": 0.85,
+    "reasoning": "主要分享行銷觀點和產業洞察，例如對「行銷設計」職務的看法、直銷話術的揭露、行銷冷知識等。同時，個人簡介提及品牌行銷經驗和諮詢服務，顯示有專業服務的意圖，但內容上觀點分享佔主導。"
+  },
+  "barbertree.art": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "思想觀點型",
+    "confidence": 0.85,
+    "reasoning": "主要分享個人生活、求職面試等經驗，帶有個人敘事色彩，同時也會對職場現象發表看法。"
+  },
+  "bro.sticky.notes": {
+    "primary_type": "思想觀點型",
+    "secondary_type": "知識教學型",
+    "confidence": 0.85,
+    "reasoning": "主要分享職場觀點和趨勢分析，偶爾穿插AI工具教學，但核心是觀點輸出。"
+  },
+  "bump_into0328": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.9,
+    "reasoning": "貼文內容以銷售商品、訂單增加、粉絲成長為主，同時記錄全職手作的創業歷程。"
+  },
+  "burri3188": {
+    "primary_type": "專業服務型",
+    "secondary_type": "知識教學型",
+    "confidence": 0.85,
+    "reasoning": "創作者簡介提及數位廣告、廣告整合策略、AI自動行銷，代表性貼文也多與行銷相關，且包含專業領域的提醒與建議。部分貼文帶有教學意味，因此次要類型為知識教學型。"
+  },
+  "catcat0619": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "混合型",
+    "confidence": 0.85,
+    "reasoning": "創作者分享個人成長經歷（單親、北漂、減肥），並積極尋求合作機會，符合創業歷程型特徵。同時，內容也包含生活分享和情感表達，因此也帶有混合型特徵。"
+  },
+  "ccstudio707": {
+    "primary_type": "專業服務型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要提供毛髮管理服務，並透過內容獲客，同時分享個人創業故事。"
+  },
+  "chengyin330": {
+    "primary_type": "思想觀點型",
+    "secondary_type": "專業服務型",
+    "confidence": 0.85,
+    "reasoning": "主要內容為對社會議題的觀點評論，例如對台灣殖民歷史、種姓制度的看法。同時，也提供政府補助申請的專業服務，並有相關著作，因此也具備專業服務型的特徵。"
+  },
+  "chuchu.shop2022": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要販售蜂蜜相關產品，並記錄擺攤經驗，兼具銷售導流和創業歷程分享的特徵。"
+  },
+  "circle.studio__": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "主要內容為創業初期，包含擺攤市集、商品設計等，同時有商品銷售導流的貼文。"
+  },
+  "cymbidium0329": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "帳號名稱和簡介顯示為網店，販售日系內衣，提供下單和付款方式，但貼文內容也包含創業心路歷程，因此判斷為電商導購型為主，創業歷程型為輔。"
+  },
+  "digua_sun": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要販售拔絲地瓜，並分享生活和創業點滴，兼具導購和個人故事元素。"
+  },
+  "elaridoll": {
+    "primary_type": "電商導購型",
+    "secondary_type": null,
+    "confidence": 0.95,
+    "reasoning": "專賣娃衣選物，貼文包含商品照、價格、促銷、下單連結，明顯以銷售商品為導向。"
+  },
+  "ellie_chou": {
+    "primary_type": "專業服務型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "創作者簡介強調保險價值、成長型思維及業務力，並提供Line諮詢，符合專業服務型特徵。部分貼文分享個人生活和工作，略帶創業歷程型色彩。"
+  },
+  "enjoy_unique_cuisine": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "主要內容為開店紀錄，分享創業過程中的酸甜苦辣，但同時也有訂餐資訊和商品銷售導流的意圖。"
+  },
+  "fatnerdstock": {
+    "primary_type": "專業服務型",
+    "secondary_type": "知識教學型",
+    "confidence": 0.85,
+    "reasoning": "帳號簡介提及網站架設、SEO代操等服務，並提供課程連結和電子報訂閱，顯示其主要目標是透過內容獲客並提供專業服務，同時包含知識教學的元素。"
+  },
+  "fortuna780731": {
+    "primary_type": "混合型",
+    "secondary_type": "專業服務型",
+    "confidence": 0.75,
+    "reasoning": "創作者內容多元，包含靈性療癒、元辰宮等服務，也分享生活和觀點，但專業服務和個人品牌經營的色彩較濃厚。"
+  },
+  "foryourbrand.tw": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "混合型",
+    "confidence": 0.75,
+    "reasoning": "創作者簡介提及從體制出走、打造事業，貼文內容包含個人生活、與粉絲互動、以及AI工具分享，顯示創業歷程為主，但內容多元。"
+  },
+  "gracecareercoach": {
+    "primary_type": "專業服務型",
+    "secondary_type": "思想觀點型",
+    "confidence": 0.9,
+    "reasoning": "創作者提供職涯諮詢和芳療服務，並分享相關專業知識，例如精油的選擇和使用。同時，她也分享自己對於產業現象的觀察和觀點，例如對有機標示的建議。"
+  },
+  "heartsent_cosmos": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "帳號簡介和貼文內容都顯示以銷售商品為主，同時記錄創業初期的心路歷程，因此主要為電商導購型，次要為創業歷程型。"
+  },
+  "helloworld_cookies": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.9,
+    "reasoning": "主要販售商品（脆脆燕麥），貼文包含商品照、促銷資訊，並導流至官網下單。同時分享創業歷程故事，但比重較低。"
+  },
+  "houjing_65gp": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.9,
+    "reasoning": "主要內容為記錄創業賣雞排的歷程，包含每日進度、遇到的困難與收穫，以及顧客互動等。同時也有提到商品（雞排）的價格和地點，具有導購性質。"
+  },
+  "jeancatcrystal": {
+    "primary_type": "混合型",
+    "secondary_type": null,
+    "confidence": 0.8,
+    "reasoning": "雖然簡介提到水晶手作，但高互動貼文多為生活話題、尋求建議、或社群互動，並非聚焦商品銷售或教學，因此判斷為混合型。"
+  },
+  "jenniferintsmc": {
+    "primary_type": "知識教學型",
+    "secondary_type": null,
+    "confidence": 0.95,
+    "reasoning": "該創作者主要分享減脂、增肌的知識和方法，提供飲食建議，符合知識教學型的特徵。貼文中包含明確的步驟化教學（例如：能吃的10種肉），並使用 #減肥歷程 #減肥日記 等標籤，顯示其內容以教學為主。"
+  },
+  "jocosa_nails": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "主要內容為創業故事分享，包含棄單、大單等情節，同時穿插穿戴甲商品展示，具有一定的導購性質。"
+  },
+  "jsnewlife_rise": {
+    "primary_type": "知識教學型",
+    "secondary_type": "專業服務型",
+    "confidence": 0.85,
+    "reasoning": "簡介提及打造變現系統，貼文提供銷售秘訣檢核表，顯示其知識教學的意圖。同時，簡介提及一人公司顧問，貼文分享商業洞察，暗示提供專業服務。"
+  },
+  "kakacardcare": {
+    "primary_type": "專業服務型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "專精卡片修復服務，透過內容獲客，簡介提供聯絡方式。部分貼文與商品（卡牌）相關，有導購潛力。"
+  },
+  "lazy_nail_927": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要販售飾品穿戴甲，有商品照、價格促銷等資訊，導流下單。同時分享創業歷程，但比重較低。"
+  },
+  "leadingmrk": {
+    "primary_type": "知識教學型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.95,
+    "reasoning": "老K提供數位工具教學，並分享個人創業經驗，同時銷售線上課程和顧問服務。貼文中包含課程報名連結和個人經歷分享，符合知識教學和創業歷程的特徵。"
+  },
+  "lee_peipeiyu": {
+    "primary_type": "思想觀點型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要分享個人觀點和情感，帶有個人成長和創業相關的敘事。"
+  },
+  "leesamplees": {
+    "primary_type": "思想觀點型",
+    "secondary_type": "混合型",
+    "confidence": 0.85,
+    "reasoning": "主要內容為生肖運勢提醒和對產業趨勢的分析，帶有個人觀點和評論性質。同時也包含一些生活感悟，因此可視為混合型。"
+  },
+  "linle_0429": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "思想觀點型",
+    "confidence": 0.85,
+    "reasoning": "創辦人分享創業心聲，鼓勵他人，同時也分享水瓶座相關話題，帶有觀點分享性質。"
+  },
+  "linyah_studio": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "主要內容為記錄創業初期，包含訂單數、粉絲數等，並分享創業心得。同時也有商品照片和導購連結，但比重較低。"
+  },
+  "love.cat_1208": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "主要分享創業心路歷程，包含遇到的困難與喜悅，同時也有商品銷售連結，具備電商導購的特徵。"
+  },
+  "ltc_052414": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "創作者販售甜點，提供預訂資訊和購買連結，符合電商導購型特徵。同時，貼文中也分享創業歷程，因此也帶有創業歷程型的色彩。"
+  },
+  "lucaslu.19": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "思想觀點型",
+    "confidence": 0.85,
+    "reasoning": "貼文內容多為創業相關的經驗分享、觀點評論和問答互動，且高互動貼文多與創業、市場、投資等議題相關。雖然有部分教學內容，但比重不高。"
+  },
+  "lynmiere.acc": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "貼文內容主要記錄創業歷程，包含每日更新、粉絲成長、尋求建議等。同時，帳號名稱和簡介顯示與飾品相關，可能兼具電商導購性質。"
+  },
+  "mandy_aispace": {
+    "primary_type": "知識教學型",
+    "secondary_type": "專業服務型",
+    "confidence": 0.85,
+    "reasoning": "該創作者提供AI培訓，並分享數位工作流相關知識，同時也提供企業導入評估合作等服務。"
+  },
+  "mindora._.studio": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "知識教學型",
+    "confidence": 0.9,
+    "reasoning": "創作者分享從低薪接案到一人公司的歷程，並提供設計變現的教學內容，貼文包含個人經驗和實用技巧。"
+  },
+  "mori_anew": {
+    "primary_type": "電商導購型",
+    "secondary_type": null,
+    "confidence": 0.95,
+    "reasoning": "從簡介和貼文內容可得知，該帳號主要目的是銷售服飾商品，貼文內容包含商品照片、地點資訊，以及促銷訊息，符合電商導購型的特徵。"
+  },
+  "mori_studio.25": {
+    "primary_type": "電商導購型",
+    "secondary_type": null,
+    "confidence": 0.95,
+    "reasoning": "帳號名稱和顯示名稱包含「女裝服飾」，貼文內容多為商品上架、銷量、促銷等資訊，且包含商品照片，判斷為電商導購型。"
+  },
+  "mr.derek0805": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.9,
+    "reasoning": "主要分享創業歷程，包含個人故事、轉職經驗、以及電商經營技巧。同時，部分貼文也展示了銷售成果，具有電商導購的次要特徵。"
+  },
+  "mtvnews1984": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "混合型",
+    "confidence": 0.85,
+    "reasoning": "貼文內容包含創業開店的紀錄（水餃店），以及攝影師的成就感分享，同時也有對時事的評論，因此判斷為創業歷程型為主，混合型為輔。"
+  },
+  "mu_jen5888": {
+    "primary_type": "電商導購型",
+    "secondary_type": null,
+    "confidence": 0.95,
+    "reasoning": "主要販售苜蓿芽捲，貼文內容包含商品照片、價格（暗示，如「好吃」、「回購」）、促銷（起司餅皮限定），並提供聯絡方式導流銷售。"
+  },
+  "mumu0916": {
+    "primary_type": "混合型",
+    "secondary_type": null,
+    "confidence": 0.8,
+    "reasoning": "內容包含生活分享、議題討論、互助社群等多種類型，沒有明顯的主導風格。雖然簡介提到健康諮詢，但貼文內容並未聚焦於此。"
+  },
+  "ni_beautyyard": {
+    "primary_type": "專業服務型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "提供皮膚諮詢/保養服務，並輔導創業，貼文內容包含客戶體驗、招生等，同時分享創業甘苦談。"
+  },
+  "niu00_000": {
+    "primary_type": "知識教學型",
+    "secondary_type": "混合型",
+    "confidence": 0.85,
+    "reasoning": "創作者分享Canva字體、AI工具應用等教學內容，並提供懶人包，符合知識教學型特徵。同時，內容也包含個人生活和創業相關，因此也帶有混合型特徵。"
+  },
+  "nnntimee": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "主要分享創業故事，例如不露臉經營甜點店的歷程，並有導購行為，例如百貨公司設櫃。"
+  },
+  "oceanchou": {
+    "primary_type": "知識教學型",
+    "secondary_type": "專業服務型",
+    "confidence": 0.9,
+    "reasoning": "簡介提及WordPress架站教學、一人公司顧問，並提供諮詢預約，貼文內容包含知識分享，符合知識教學型和專業服務型的特徵。"
+  },
+  "onemore_68": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.8,
+    "reasoning": "主要分享開店創業的心路歷程，包含粉絲成長、活動宣傳等，同時有提供場地預約服務，具有導購性質。"
+  },
+  "pandawork_": {
+    "primary_type": "專業服務型",
+    "secondary_type": "知識教學型",
+    "confidence": 0.85,
+    "reasoning": "創作者簡介和貼文內容都顯示其主要業務是平面設計和廣告圖設計，並提供客戶案例和設計技巧分享，屬於專業服務型。同時，部分貼文也包含設計教學和工具推薦，因此也帶有知識教學型的特徵。"
+  },
+  "passer_999": {
+    "primary_type": "專業服務型",
+    "secondary_type": "知識教學型",
+    "confidence": 0.85,
+    "reasoning": "創作者提供AI廣告、影視等服務，並分享相關專業知識，同時有教學內容，但主要目的是獲取客戶。"
+  },
+  "pig_likeme": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要販售童趣小物，貼文包含商品照、價格資訊，並分享創業歷程。"
+  },
+  "popupasia": {
+    "primary_type": "品牌組織型",
+    "secondary_type": "混合型",
+    "confidence": 0.85,
+    "reasoning": "該帳號為亞洲手創展的官方帳號，主要發布活動訊息、品牌推廣等內容，符合品牌組織型的特徵。同時，內容也包含尋找合作夥伴等訊息，略帶混合型特徵。"
+  },
+  "pudding_213312": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "貼文包含商品價格、促銷資訊，且帳號名稱包含「賣場」字樣，符合電商導購型特徵。同時，第一篇貼文提及「創業日記」，略帶創業歷程型色彩。"
+  },
+  "rately.tw": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "知識教學型",
+    "confidence": 0.85,
+    "reasoning": "主要分享一人公司創業相關資訊與訪談，同時也提供經營相關知識，但創業歷程的色彩更濃厚。"
+  },
+  "relax_aromatic_yen": {
+    "primary_type": "專業服務型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "提供客製化香服務、沉香鑒定，並銷售相關商品，同時分享產業觀點，有獲客意圖。貼文中包含商品資訊和服務介紹，也提及產地證明等細節，具有電商導購的特徵。"
+  },
+  "richard870316": {
+    "primary_type": "專業服務型",
+    "secondary_type": null,
+    "confidence": 0.95,
+    "reasoning": "創作者主要提供室內設計服務，透過貼文尋找潛在客戶與合作夥伴，並提供聯絡方式與服務資訊，符合專業服務型的特徵。"
+  },
+  "risensweets_2025": {
+    "primary_type": "電商導購型",
+    "secondary_type": null,
+    "confidence": 0.95,
+    "reasoning": "帳號名稱和簡介表明是販售甜食的店家，貼文內容多為商品（草莓冰）的呈現，且有地點、營業時間等資訊，主要目的是吸引顧客到店消費。"
+  },
+  "senmifruit2025": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "主要內容為分享創業心路歷程，並積極與其他創業者互動，但同時也在銷售商品，因此判斷為創業歷程型為主，電商導購型為輔。"
+  },
+  "shihua1640": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "專業服務型",
+    "confidence": 0.85,
+    "reasoning": "創作者分享個人健康轉變歷程，並結合按摩、艾草等服務，同時尋求客戶，具有創業歷程和專業服務的雙重特徵。"
+  },
+  "shinybearnrd": {
+    "primary_type": "思想觀點型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要分享個人心情、職場心得等觀點，部分貼文帶有個人經歷和感悟，但缺乏明確的創業或轉職歷程記錄。"
+  },
+  "smooth._tea": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要內容為商品介紹、促銷活動（Uber Eats 買一送一），並有部分創業初期掙扎的內容。"
+  },
+  "sn._12design": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "專業服務型",
+    "confidence": 0.9,
+    "reasoning": "主要內容圍繞20歲女大生的創業歷程，分享個人故事與成長，同時也提供Logo、包裝設計等專業服務。"
+  },
+  "sogo_digital": {
+    "primary_type": "專業服務型",
+    "secondary_type": "知識教學型",
+    "confidence": 0.85,
+    "reasoning": "創作者簡介強調電商、醫美、線上課程的操盤經驗，並提供LINE聯繫方式，主要目的是獲取客戶。貼文內容包含廣告案例分享，也包含教學內容，因此知識教學型為次要類型。"
+  },
+  "sogood.88": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "帳號名稱、簡介和代表性貼文都顯示以銷售商品為主，同時分享創業相關內容。"
+  },
+  "sshcckkee": {
+    "primary_type": "電商導購型",
+    "secondary_type": null,
+    "confidence": 0.7,
+    "reasoning": "從個人簡介「花禮支持線上預訂」以及高互動貼文內容判斷，主要業務為花藝商品銷售，但目前貼文內容主要為徵社群小幫手，導購內容較少。"
+  },
+  "superhunter__": {
+    "primary_type": "專業服務型",
+    "secondary_type": "思想觀點型",
+    "confidence": 0.85,
+    "reasoning": "創作者自稱獵頭，分享職場內幕、職涯指引，並提供履歷健檢等服務，主要目的是獲取客戶。同時，也分享職場觀點和經驗，具有一定的思想觀點型特徵。"
+  },
+  "thedigitalbloomer": {
+    "primary_type": "思想觀點型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要分享個人觀點、經驗與體悟，包含自媒體經營的堅持、順境的徵兆、尊重差異等，同時也記錄了自媒體創業的歷程與心境。"
+  },
+  "tina07052128": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要販售烘焙產品，並有促銷和導購意圖。同時分享了作為安親老師斜槓創業的心路歷程。"
+  },
+  "titi_eyelash_pro": {
+    "primary_type": "知識教學型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.9,
+    "reasoning": "創作者簡介提及「進修輔導」、「線上課程」，貼文內容包含創業經驗分享和教學內容，符合知識教學型，同時也分享個人創業歷程。"
+  },
+  "trippstudiotw": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "主要分享創業歷程，包含追蹤人數成長、創業甘苦談等個人敘事，同時也販售飾品，具有電商導購的特徵。"
+  },
+  "truemini_official": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "該帳號主要販售生吐司等商品，貼文內容包含商品介紹、促銷資訊，並提供官網連結導購。同時，部分貼文也分享了品牌經營的心路歷程。"
+  },
+  "unlimited.anna": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "專業服務型",
+    "confidence": 0.85,
+    "reasoning": "創作者分享接案經歷、自由工作者生活，以及個人成長心得，符合創業歷程型特徵。同時，部分貼文也涉及行銷知識分享，略帶專業服務型色彩。"
+  },
+  "wanjun0806": {
+    "primary_type": "電商導購型",
+    "secondary_type": null,
+    "confidence": 0.95,
+    "reasoning": "貼文內容主要圍繞商品（手工苜蓿芽捲）的銷售，包含價格、促銷、預購資訊，以及導流至實體店面的資訊。"
+  },
+  "wendao.marketing": {
+    "primary_type": "專業服務型",
+    "secondary_type": "知識教學型",
+    "confidence": 0.85,
+    "reasoning": "創作者簡介表明其為行銷接案人，內容多為行銷經驗分享，且有部分教學內容，但主要目的應為獲客。"
+  },
+  "yabai.tw": {
+    "primary_type": "電商導購型",
+    "secondary_type": null,
+    "confidence": 0.95,
+    "reasoning": "帳號名稱為選物店，貼文內容多為商品介紹、銷售資訊，且有價格、促銷等資訊，符合電商導購型特徵。"
+  },
+  "yii.2025": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "創作者分享創業歷程，記錄賣童裝的過程，同時也帶有電商導購的性質。"
+  },
+  "yiwan0228": {
+    "primary_type": "電商導購型",
+    "secondary_type": "創業歷程型",
+    "confidence": 0.85,
+    "reasoning": "主要販售雞蛋糕，貼文內容包含商品照片、菜單，並提供訂購資訊。同時，部分貼文分享創業日常和個人感受，帶有創業歷程的元素。"
+  },
+  "yncjaden": {
+    "primary_type": "思想觀點型",
+    "secondary_type": "混合型",
+    "confidence": 0.75,
+    "reasoning": "創作者名稱包含「解構品牌」，貼文內容多為對品牌、影視作品的解構和提問，偏向觀點分享。同時，也有互追漲粉的內容，略帶混合型特徵。"
+  },
+  "yolo.29.official": {
+    "primary_type": "創業歷程型",
+    "secondary_type": null,
+    "confidence": 0.95,
+    "reasoning": "創作者分享創業歷程，目標導向，記錄追蹤數成長，符合創業歷程型特徵。"
+  },
+  "yujen.tsao": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "專業服務型",
+    "confidence": 0.85,
+    "reasoning": "創作者分享個人在台南的數位遊牧和技能交換經驗，同時提供插畫設計服務，並有接案事業導師的身份。主要內容圍繞個人經歷和成長，但也包含專業技能的應用和服務提供。"
+  },
+  "yuwen__shop": {
+    "primary_type": "創業歷程型",
+    "secondary_type": "電商導購型",
+    "confidence": 0.85,
+    "reasoning": "創作者分享創業歷程，強調I人創業，並鼓勵批發飾品。同時，內容也包含商品銷售和導流的元素。"
+  },
+  "zhsun41": {
+    "primary_type": "知識教學型",
+    "secondary_type": "專業服務型",
+    "confidence": 0.85,
+    "reasoning": "貼文內容包含教學步驟（如何成為顧問），並提及課程與顧問服務，同時分享個人經驗與觀點。"
+  },
+  "zoey0.626": {
+    "primary_type": "混合型",
+    "secondary_type": null,
+    "confidence": 0.8,
+    "reasoning": "從貼文內容和簡介判斷，主要內容為個人生活抱怨和記錄，缺乏其他類型的特徵。"
+  }
+}
