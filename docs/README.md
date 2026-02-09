@@ -41,16 +41,16 @@
 
 ```bash
 # 1. 基礎分析
-python scripts/basic_analysis.py
+python scripts/basic/analysis.py
 
 # 2. 詞彙分析
-python scripts/word_analysis.py
+python scripts/word/analysis.py
 
-# 3. 文章分類 (待開發)
-python scripts/article_classifier.py
+# 3. 文章分類 
+python scripts/article/analysis.py
 
-# 4. 創作者分類 (待開發)
-python scripts/creator_classifier.py
+# 4. 創作者分類 
+python scripts/creator/analysis.py
 ```
 
 ## 分析工具

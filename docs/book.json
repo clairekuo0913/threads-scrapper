@@ -1,26 +1,28 @@
-[
-    {
-        "path": "docs/README.md",
-        "title": "Introduction"
-    },
-    {
-        "path": "docs/00-dataset-analysis.md",
-        "title": "0. 資料集分布分析"
-    },
-    {
-        "path": "docs/01-basic-analysis.md",
-        "title": "1. 基礎指標分析"
-    },
-    {
-        "path": "docs/02-word-analysis.md",
-        "title": "2. 詞彙分析"
-    },
-    {
-        "path": "docs/03-article-classification.md",
-        "title": "3. 文章分類"
-    },
-    {
-        "path": "docs/04-creator-classification.md",
-        "title": "4. 創作者分類"
-    }
-]
+{
+    "chapters": [
+        {
+            "path": "docs/README.md",
+            "title": "Introduction"
+        },
+        {
+            "path": "docs/00-dataset-analysis.md",
+            "title": "0. 資料集分布分析"
+        },
+        {
+            "path": "docs/01-basic-analysis.md",
+            "title": "1. 基礎指標分析"
+        },
+        {
+            "path": "docs/02-word-analysis.md",
+            "title": "2. 詞彙分析"
+        },
+        {
+            "path": "docs/03-article-classification.md",
+            "title": "3. 文章分類"
+        },
+        {
+            "path": "docs/04-creator-classification.md",
+            "title": "4. 創作者分類"
+        }
+    ]
+}
