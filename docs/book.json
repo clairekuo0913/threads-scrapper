@@ -1,32 +1,36 @@
 {
-    "chapters": [
-        {
-            "path": "docs/README.md",
-            "title": "Introduction"
-        },
-        {
-            "path": "docs/proposal.md",
-            "title": "專案企劃書"
-        },
-        {
-            "path": "docs/00-dataset-analysis.md",
-            "title": "0. 資料集分布分析"
-        },
-        {
-            "path": "docs/01-basic-analysis.md",
-            "title": "1. 基礎指標分析"
-        },
-        {
-            "path": "docs/02-word-analysis.md",
-            "title": "2. 詞彙分析"
-        },
-        {
-            "path": "docs/03-article-classification.md",
-            "title": "3. 文章分類"
-        },
-        {
-            "path": "docs/04-creator-classification.md",
-            "title": "4. 創作者分類"
-        }
-    ]
+    "plugins": [  "anchor-navigation-ex", "copy-code-button", "theme-comscore", "ga" ],
+    "pluginsConfig": {
+      "fontSettings": {
+        "theme": "night",
+        "family": "sans"
+      },
+      "theme-default": {
+        "showLevel": false
+      },
+      "anchor-navigation-ex": {
+          "showLevel": false,
+          "associatedWithSummary": false,
+          "printLog": false,
+          "multipleH1": false,
+          "mode": "float",
+          "showGoTop":true,
+          "float": {
+              "floatIcon": "fa fa-navicon",
+              "showLevelIcon": false,
+              "level1Icon": "fa fa-hand-o-right",
+              "level2Icon": "fa fa-hand-o-right",
+              "level3Icon": "fa fa-hand-o-right"
+          },
+          "pageTop": {
+              "showLevelIcon": false,
+              "level1Icon": "fa fa-hand-o-right",
+              "level2Icon": "fa fa-hand-o-right",
+              "level3Icon": "fa fa-hand-o-right"
+          }
+      },
+      "ga": {
+        "token": ""
+      }
+    }
 }
