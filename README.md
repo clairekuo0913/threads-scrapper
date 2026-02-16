@@ -1,152 +1,81 @@
-# Threads Scraper & Analysis
+# Threads 內容策略分析報告
 
-Threads 社群平台的爬蟲與數據分析工具。從使用者搜尋、貼文爬取到多維度內容分析，完整涵蓋資料蒐集與洞察產出的流程。
+## 企劃書
 
-## 功能概覽
+- [專案企劃書](./proposal.md)：研究題目、內容方向、技術架構、時程規劃與預期成果
 
-| 模組 | 說明 |
+## 研究目標
+
+透過數據分析找出 Threads 平台的關鍵成效因子，為中文創作者提供可操作的內容策略建議。
+
+## 資料來源
+
+| 項目 | 數值 |
 |------|------|
-| **使用者搜尋** | 依關鍵字搜尋 Threads 使用者，建立目標名單 |
-| **貼文爬取** | 爬取個人檔案與歷史貼文，結構化儲存 |
-| **資料集分析** | 粉絲 / 貼文分布、Gini 係數、相關性矩陣 |
-| **基礎指標分析** | 時段、文長、句數 vs. 互動成效 |
-| **詞彙分析** | 斷詞詞頻、高互動詞彙、象限分析、文字雲 |
-| **文章分類** | AI 自動分類 8 種文章類型，分析各類成效 |
-| **創作者分類** | AI 自動分類 7 種創作者類型，比較成功模式 |
+| 分析期間 | 2024 - 2026 |
+| 總貼文數 | ~9,000 篇 |
+| 創作者數 | ~95 位 |
+| 分析時區 | 台灣時間 (UTC+8) |
+| 篩選條件 | 排除 >100k 粉絲的極端大帳號 |
 
-## 安裝
+## 分析報告
 
-需要 Python 3.12+ 與 Chrome 瀏覽器。
+### [0. 資料集分布分析](./00-dataset-analysis.md)
 
-```bash
-# 使用 uv（推薦）
-uv sync
+- 粉絲數 / 貼文數分布與 Gini 係數
+- 互動指標（按讚、回覆、轉發）的分布特徵
+- 各指標間的相關性矩陣
 
-# 或使用 pip
-pip install -e .
-```
+### [1. 基礎指標分析](./01-basic-analysis.md)
 
-> ChromeDriver 須與 Chrome 版本相符。macOS ARM64 版本已包含於專案中。
+- 發文時段分析：小時、時段、商業時段
+- 內容形式分析：文長區間、句子數量
+- 各維度的互動成效比較
 
-## 使用方法
+### [2. 詞彙分析](./02-word-analysis.md)
 
-### 1. 登入取得 Cookies
+- 詞頻統計與文字雲
+- 高互動詞彙識別
+- 詞彙象限分析（明星詞 / 藍海詞 / 紅海詞 / 地雷詞）
+- 依粉絲量級分層的差異分析
 
-首次執行會開啟瀏覽器供手動登入，登入後按 Enter 儲存 Cookies。後續執行自動載入。
+### [3. 文章分類](./03-article-classification.md)
 
-```bash
-python fetch_posts.py
-```
+- AI 自動分類：教學型 / 經驗分享 / 觀點評論 / 資源整理 / 問答互動 / 成果展示 / 生活記錄 / 其他
+- 各類別互動成效排名
+- 最佳發文時段 x 文章類型交叉分析
+- 最佳文長 x 文章類型交叉分析
 
-### 2. 搜尋使用者
+### [4. 創作者分類](./04-creator-classification.md)
 
-依關鍵字搜尋目標使用者，結果存入 `data/discovered_users.json`。
+- AI 自動分類：知識教學型 / 創業歷程型 / 專業服務型 / 電商導購型 / 思想觀點型 / 品牌組織型 / 混合型
+- 各類型互動成效與內容組合比較
+- 發文頻率 vs. 互動成效分析
+- 粉絲量級 x 創作者類型交叉分析
 
-```bash
-python fetch_users.py
-```
-
-### 3. 爬取貼文
-
-```bash
-# 爬取單一使用者
-python fetch_posts.py <username>
-python fetch_posts.py https://www.threads.net/@username
-
-# 批次爬取（讀取 discovered_users.json）
-python fetch_posts.py
-```
-
-資料存放於 `data/<username>/<timestamp>.json`，結構如下：
-
-```json
-{
-  "profile": {
-    "username": "example",
-    "full_name": "Example Name",
-    "followers": 1000,
-    "bio": "...",
-    "bio_links": []
-  },
-  "posts": [
-    {
-      "id": "...",
-      "text": "貼文內容",
-      "url": "https://www.threads.net/post/...",
-      "posted_at": "2025-01-01T12:00:00.000Z",
-      "like_count": 50,
-      "reply_count": 3,
-      "repost_count": 2,
-      "forward_count": 1
-    }
-  ]
-}
-```
-
-### 4. 執行分析
+## 重現分析
 
 ```bash
-# 資料集分布分析
+# 0. 資料集分布
 python scripts/dataset/analysis.py
 
-# 基礎指標分析（時段、文長、互動）
+# 1. 基礎指標
 python scripts/basic/analysis.py
 
-# 詞彙分析（詞頻、文字雲、象限圖）
+# 2. 詞彙分析
 python scripts/word/analysis.py
 
-# 文章分類（AI 分類 + 成效分析）
+# 3. 文章分類（需要 Gemini API Key）
 python scripts/article/analysis.py
 
-# 創作者分類（AI 分類 + 模式比較）
+# 4. 創作者分類（需要 Gemini API Key）
 python scripts/creator/analysis.py
 ```
 
-分析結果輸出至 `scripts/outputs/`：
+## 分析工具
 
-```
-scripts/outputs/
-├── plots/       # 視覺化圖表
-├── tables/      # CSV 數據表
-└── cache/       # AI 分類快取
-```
-
-## 技術架構
-
-```
-fetch_users.py          # 關鍵字搜尋使用者
-fetch_posts.py          # 爬取個人檔案與貼文
-scripts/
-├── shared/utils.py     # 共用工具（資料載入、中文字型、文本清洗）
-├── dataset/            # 資料集分布分析
-├── basic/              # 基礎指標分析
-├── word/               # 詞彙分析（jieba 斷詞）
-├── article/            # 文章分類（Google Gemini）
-└── creator/            # 創作者分類（Google Gemini）
-docs/                   # 分析報告文件（GitBook）
-```
-
-**關鍵技術：**
-
-- **爬蟲**：Selenium + BeautifulSoup，Cookie 驗證、動態滾動載入、自動去重
-- **資料驗證**：Pydantic 結構化模型
-- **中文處理**：jieba 斷詞 + 自訂詞典 / 停用詞
-- **AI 分類**：Google Gemini，含快取避免重複呼叫
-- **視覺化**：matplotlib + seaborn，支援中文字型
-- **分層分析**：依粉絲量級分層（0-100 / 100-1k / 1k-10k / 10k+）
-
-## 環境變數
-
-複製 `.env.example` 並填入所需金鑰：
-
-```bash
-cp .env.example .env
-```
-
-AI 分類功能（文章 / 創作者分類）需要設定 Google Gemini API Key。
-
-## 注意事項
-
-- `data/` 目錄已加入 `.gitignore`，包含使用者隱私資料
-- `threads_cookies.pkl` 包含登入憑證，請勿提交至版控
-- 請勿過度頻繁爬取，以避免觸發 Threads 反爬蟲機制
+- Python 3.12+
+- pandas / matplotlib / seaborn
+- 中文斷詞：jieba
+- AI 分類：Google Gemini
+- 文字雲：wordcloud
