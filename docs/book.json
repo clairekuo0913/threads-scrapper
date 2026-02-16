@@ -5,6 +5,10 @@
             "title": "Introduction"
         },
         {
+            "path": "docs/proposal.md",
+            "title": "專案企劃書"
+        },
+        {
             "path": "docs/00-dataset-analysis.md",
             "title": "0. 資料集分布分析"
         },
