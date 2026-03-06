@@ -65,7 +65,7 @@
 | 成果展示 | 578   | 6.7%  | 55.0 | 13.4 | 0.9  | 75   |
 | 資源整理 | 296   | 3.4%  | 29.8 | 4.3  | 1.8  | 60   |
 
-![文章類別分布](../.gitbook/assets/category_distribution.png)
+![文章類別分布](/.gitbook/assets/category_distribution.png)
 
 **數據洞察：**
 
@@ -103,7 +103,7 @@
 | 2  | 教學型  | 1.4  | 步驟教學有實用價值，人們願意轉給朋友 |
 | 3  | 成果展示 | 0.9  | 成功案例值得轉發學習         |
 
-![各類別互動表現](../.gitbook/assets/category_engagement.png)
+![各類別互動表現](/.gitbook/assets/category_engagement.png)
 
 **核心洞察：每種互動指標的冠軍都不同。** 這代表你需要根據目標選擇內容類型：
 
@@ -129,7 +129,7 @@
 | 生活記錄 | 深夜 23-7  | 49.7  | 上午 9-12  | 46.5 |
 | 資源整理 | 上午 9-12  | 49.2  | 下午 14-18 | 46.2 |
 
-![類別 × 時段 熱力圖](../.gitbook/assets/category_time_heatmap.png)
+![類別 × 時段 熱力圖](/.gitbook/assets/category_time_heatmap.png)
 
 **給創業帳號的時段建議：**
 
@@ -155,7 +155,7 @@
 | 觀點評論 | 100-200 字  | 71.6    | 精煉的觀點比冗長的論述更有力      |
 | 資源整理 | 100-200 字  | 38.1    | 清單格式，每項簡短說明即可       |
 
-![類別 × 長度 熱力圖](../.gitbook/assets/category_length.png)
+![類別 × 長度 熱力圖](/.gitbook/assets/category_length.png)
 
 **重點提醒：**
 
@@ -180,7 +180,7 @@
 | 成果展示 | 創業、朋友、一步、目標、謝謝      | 感恩和里程碑詞，正面能量            |
 | 生活記錄 | 創業、每天、工作、希望、朋友      | 日常敘事，情感表達               |
 
-![各類別關鍵詞](../.gitbook/assets/category_keywords.png)
+![各類別關鍵詞](/.gitbook/assets/category_keywords.png)
 
 **值得注意的模式：**
 

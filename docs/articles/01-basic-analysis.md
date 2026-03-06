@@ -25,7 +25,7 @@
 | 09:00 | 43.8  | 10.0  | 305 | 58   |
 | 17:00 | 43.5  | 8.0   | 471 | 73   |
 
-![每小時互動數](../.gitbook/assets/hourly_engagement.png)
+![每小時互動數](/.gitbook/assets/hourly_engagement.png)
 
 **關鍵發現：**
 
@@ -66,7 +66,7 @@
 | Prime Time      | 19:30-23:00 | 33.6  | 7.0   | 2,033 | 92   |
 | Morning Commute | 07:00-09:00 | 27.1  | 6.0   | 464   | 63   |
 
-![商業時段分析](../.gitbook/assets/commercial_slots_engagement.png)
+![商業時段分析](/.gitbook/assets/commercial_slots_engagement.png)
 
 **發文時間策略指南：**
 
@@ -92,7 +92,7 @@
 | Very Long (1000+ 字)     | 29.0  | 29.0  | 1     | 1    |
 | Long (500-1000 字)       | 21.2  | 5.0   | 52    | 18   |
 
-![文章長度分析](../.gitbook/assets/text_length_engagement.png)
+![文章長度分析](/.gitbook/assets/text_length_engagement.png)
 
 **內容長度策略：**
 
@@ -122,7 +122,7 @@
 | 41-45   | 20.2  | 11.0  | 18    | 7    |
 | 36-40   | 15.6  | 5.0   | 70    | 16   |
 
-![句子數分析](../.gitbook/assets/sentences_count_engagement.png)
+![句子數分析](/.gitbook/assets/sentences_count_engagement.png)
 
 **內容模板建議：**
 

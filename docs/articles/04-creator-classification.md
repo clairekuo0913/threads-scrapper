@@ -68,7 +68,7 @@
 | 混合型   | 4    | 4.2%  | 559   | 348   | 87.0    |
 | 品牌組織型 | 1    | 1.1%  | 5,074 | 173   | 173.0   |
 
-![創作者類型分布](../.gitbook/assets/creator_distribution.png)
+![創作者類型分布](/.gitbook/assets/creator_distribution.png)
 
 **解讀：**
 
@@ -88,7 +88,7 @@
 | 混合型   | 19.1  | 6.5    | 17.4   | 0.5    | 559   |
 | 知識教學型 | 13.4  | 7.6    | 2.2    | 0.6    | 2,868 |
 
-![創作者類型成效](../.gitbook/assets/creator_performance.png)
+![創作者類型成效](/.gitbook/assets/creator_performance.png)
 
 **三個讓人意外的發現：**
 
@@ -144,7 +144,7 @@
 | #2 | leadingmrk         | 13,834 | 26.6 | 216 | Notion 全球認證顧問，數位工具教學 |
 | #3 | _christyho_        | 3,327  | 22.9 | 263 | 自媒體導師，500+ 學員高效變現    |
 
-![Top 創作者](../.gitbook/assets/top_creators.png)
+![Top 創作者](/.gitbook/assets/top_creators.png)
 
 ### 4.2 成功創作者的共同特徵
 
@@ -172,7 +172,7 @@
 | 思想觀點型 | 觀點評論         | 生活記錄 | 觀點為主，符合預期         |
 | 混合型   | 生活記錄 / 問答互動  | 觀點評論 | 沒有主軸，什麼都發         |
 
-![內容組合](../.gitbook/assets/creator_content_mix.png)
+![內容組合](/.gitbook/assets/creator_content_mix.png)
 
 **給創業者的 3 個啟示：**
 
@@ -186,7 +186,7 @@
 
 ### 6.1 發文頻率 vs 互動表現
 
-![發文頻率 vs 互動](../.gitbook/assets/posting_frequency.png)
+![發文頻率 vs 互動](/.gitbook/assets/posting_frequency.png)
 
 從散佈圖可以觀察到：
 
@@ -196,7 +196,7 @@
 
 ### 6.2 各粉絲級距的互動表現
 
-![各級距互動表現](../.gitbook/assets/engagement_by_tier.png)
+![各級距互動表現](/.gitbook/assets/engagement_by_tier.png)
 
 **關鍵洞察：小帳號的互動率可能更好。**
 
